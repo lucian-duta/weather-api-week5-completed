@@ -1,0 +1,23 @@
+{
+  "env": {
+    "browser": false, // Indicates the code is not intended to run in a browser environment.
+    "es2021": true, // Enables syntax features and global variables specific to ECMAScript 2021.
+    "node": true // Indicates the code is intended to run in a Node.js environment.
+  },
+  "parser": "@typescript-eslint/parser", // Specifies the parser to use for understanding TypeScript syntax.
+  "parserOptions": {
+    "project": "tsconfig.json", // Points to the TypeScript configuration file of the project.
+    "sourceType": "module", // Indicates the code uses ECMAScript modules.
+    "ecmaVersion": 2021 // Sets the version of ECMAScript syntax to be used.
+  },
+  "plugins": ["@typescript-eslint"], // Includes the TypeScript plugin for ESLint, providing rules that are specific to TypeScript.
+  "extends": [
+    "eslint:recommended", // Extends a set of recommended rules from ESLint itself.
+    "plugin:@typescript-eslint/recommended" // Extends a set of recommended rules from the @typescript-eslint plugin.
+  ],
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": "warn", // Warns if a function's return type is not explicitly typed.
+    "@typescript-eslint/strict-boolean-expressions": "off", // Disables the rule requiring strict type-checking for boolean expressions.
+    "@typescript-eslint/prefer-nullish-coalescing": "off" // Disables the rule that suggests using nullish coalescing over logical OR operations when possible.
+  }
+}
